@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+}
+
+.heading-container {
+  padding: 21px;
+  width: 100%;
+  text-align: center;
+  background-color: red;
+  color: white;
+  cursor: default;
+  top: 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  letter-spacing: 4px;
+  z-index: 1;
+  position: fixed;
+}
+
+#options-container {
+  margin: 7em 0 0 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  text-align: center;
+}
+
+.option {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: rgb(225, 222, 222);
+  transition: all 0.5s;
+}
+
+.option:hover {
+  background-color: red;
+  color: white;
+}
+
+.option:active {
+  background-color: red;
+  color: white;
+}
+
+.option.active {
+  background-color: red;
+  color: white;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5em;
+}
+
+.news-card {
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr;
+  margin: 3em 0 4em 0;
+  border-radius: 10px;
+  box-shadow: 11px 11px 23px 5px rgba(0, 0, 0, 0.5);
+}
+
+.news-image-container img {
+  max-width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.news-title {
+  font-weight: bold;
+}
+
+.news-description {
+  text-align: justify;
+  color: grey;
+  margin: 0.8em 0 1em 0;
+}
+
+.view-button {
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  width: 7em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
